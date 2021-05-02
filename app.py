@@ -32,9 +32,12 @@ class Rectangle(Figure):
         self.a = a
         self.b = b
 
-    def print_area(self):
+    def calculate_area(self):
         area = self.a * self.b
-        print('The area is {}'.format(round(area, 2)))
+        return area
+
+    def print_area(self):
+        print('The area is {}'.format(round(self.calculate_area(), 2)))
 
     def print_perimeter(self):
         perimeter = self.a * 2 + self.b * 2
@@ -80,6 +83,8 @@ class Circle(Figure):
 
 square1 = Square(square_dt_1)
 square1.print_edges()
+square1.print_area()
+square1.print_perimeter()
 
 triangle1 = Triangle(*triangle_dt_1)
 triangle1.print_area()
