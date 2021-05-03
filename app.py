@@ -95,6 +95,7 @@ square1 = Square(square_dt_1)
 square1.print_edges()
 square1.print_area()
 square1.print_perimeter()
+square1.print_info()
 
 triangle1 = Triangle(*triangle_dt_1)
 triangle1.print_area()
