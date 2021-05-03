@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 from math import pi, sqrt
 import random
 # import prepare_data.triangle.gen_random
@@ -14,16 +15,23 @@ triangle_dt_2 = prepare_data.triangle.gen_randint.generate_data_1()
 triangle_dt_3 = prepare_data.triangle.gen_randint.generate_data_2()
 square_dt_1 = prepare_data.square.gen_randint.generate_data_1()
 
-class Figure:
+class Figure(ABC):
     """
     A class related to geometrical shapes
     """
+
+    @abstractmethod
+    def print_area(self):
+        print("Info about figure area:")
+
+    @abstractmethod
+    def print_perimeter(self):
+        pass
 
     def print_info(self):
         print("This class is about geometrical shapes")
 
     def print_edges(self, *args):
-        # pass
         print('Specified edges {}'.format(args))
 
 
@@ -37,6 +45,7 @@ class Rectangle(Figure):
         return area
 
     def print_area(self):
+        super().print_area()
         print('The area is {}'.format(round(self.calculate_area(), 2)))
 
     def print_perimeter(self):
@@ -60,6 +69,7 @@ class Triangle(Figure):
         self.h = h
 
     def print_area(self):
+        super().print_area()
         area = 0.5 * self.a * self.h
         print('The area is: {}'.format(round(area, 2)))
 
