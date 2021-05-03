@@ -7,13 +7,13 @@ from prepare_data.triangle import gen_random
 import prepare_data.triangle.gen_randint
 import prepare_data.square.gen_randint
 
-
 # triangle_dt_1 = prepare_data.triangle.gen_random.generate_data_1()
 triangle_dt_1 = gen_random.generate_data_1()
 
 triangle_dt_2 = prepare_data.triangle.gen_randint.generate_data_1()
 triangle_dt_3 = prepare_data.triangle.gen_randint.generate_data_2()
 square_dt_1 = prepare_data.square.gen_randint.generate_data_1()
+
 
 class Figure(ABC):
     """
@@ -111,5 +111,3 @@ if random.random() >= 0.5:
 else:
     f = Square(7)
 f.print_area()
-
-
