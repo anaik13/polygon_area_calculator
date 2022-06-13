@@ -1,14 +1,12 @@
 from abc import ABC, abstractmethod
 from math import pi, sqrt
 import random
-# import prepare_data.triangle.gen_random
-from prepare_data.triangle import gen_random
 
-import prepare_data.triangle.gen_randint
 import prepare_data.square.gen_randint
+import prepare_data.triangle.gen_randint
+import prepare_data.triangle.gen_random
 
-# triangle_dt_1 = prepare_data.triangle.gen_random.generate_data_1()
-triangle_dt_1 = gen_random.generate_data_1()
+triangle_dt_1 = prepare_data.triangle.gen_random.generate_data_1()
 
 triangle_dt_2 = prepare_data.triangle.gen_randint.generate_data_1()
 triangle_dt_3 = prepare_data.triangle.gen_randint.generate_data_2()

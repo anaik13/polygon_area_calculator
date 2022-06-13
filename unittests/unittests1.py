@@ -1,6 +1,5 @@
 import unittest2
-# import polygon_area_calculator.app
-# import app
+
 import app
 import prepare_data.square.gen_randint
 
